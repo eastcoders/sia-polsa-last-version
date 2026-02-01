@@ -1,0 +1,11 @@
+{
+    "name": "Akademiks",
+    "alias": "akademiks",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Akademiks\\Providers\\AkademiksServiceProvider"
+    ],
+    "files": []
+}
