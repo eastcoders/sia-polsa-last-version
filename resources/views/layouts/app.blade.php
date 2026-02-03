@@ -2,7 +2,8 @@
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
     class="light-style layout-navbar-fixed layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-semi-dark"
-    data-template="vertical-menu-template-no-customizer-starter" data-style="light">
+    data-template="vertical-menu-template-no-customizer-starter" data-style="light"
+    data-assets-path="{{ asset('assets/') }}/">
 
 <head>
     <meta charset="utf-8" />
@@ -48,6 +49,7 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('assets/js/config.js') }}"></script>
     @vite(['resources/js/app.js'])
+    @stack('styles')
 
 </head>
 
@@ -132,6 +134,7 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <!-- Page JS -->
+    @stack('scripts')
 </body>
 
 </html>

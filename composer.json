@@ -32,6 +32,9 @@
         "psr-4": {
             "App\\": "app/",
             "Modules\\Akademiks\\": "Modules/Akademiks/app/",
+            "Modules\\Akademiks\\Database\\Factories\\": "Modules/Akademiks/database/factories/",
+            "Modules\\Akademiks\\Database\\Seeders\\": "Modules/Akademiks/database/seeders/",
+            "Modules\\Akademiks\\Database\\": "Modules/Akademiks/database/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

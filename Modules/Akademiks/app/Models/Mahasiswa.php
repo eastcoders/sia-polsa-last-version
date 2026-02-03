@@ -2,8 +2,9 @@
 
 namespace Modules\Akademiks\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
 // use Modules\Akademiks\Database\Factories\MahasiswaFactory;
 
 class Mahasiswa extends Model
@@ -28,12 +29,31 @@ class Mahasiswa extends Model
         'npwp',
         'sync_at',
         'sync_status',
-        'sync_message'
+        'sync_message',
     ];
 
+    protected static function newFactory()
+    {
+        return \Modules\Akademiks\Database\Factories\MahasiswaFactory::new();
+    }
 
-    // protected static function newFactory(): MahasiswaFactory
-    // {
-    //     // return MahasiswaFactory::new();
-    // }
+    public function alamat()
+    {
+        return $this->hasOne(Alamat::class, 'id_mahasiswa', 'id_mahasiswa');
+    }
+
+    public function orangTua()
+    {
+        return $this->hasOne(OrangTua::class, 'id_mahasiswa', 'id_mahasiswa');
+    }
+
+    public function wali()
+    {
+        return $this->hasOne(Wali::class, 'id_mahasiswa', 'id_mahasiswa');
+    }
+
+    public function riwayatPendidikan()
+    {
+        return $this->hasMany(RiwayatPendidikan::class, 'id_mahasiswa', 'id_mahasiswa');
+    }
 }

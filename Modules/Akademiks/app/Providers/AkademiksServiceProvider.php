@@ -163,6 +163,11 @@ class AkademiksServiceProvider extends ServiceProvider
             'akademiks::widgets.akademik-summary-widget',
             \Modules\Akademiks\Livewire\Widgets\AkademikSummaryWidget::class
         );
+
+        \Livewire\Livewire::component(
+            'akademiks::mahasiswa.index',
+            \Modules\Akademiks\Livewire\Mahasiswa\Index::class
+        );
     }
 
     /**

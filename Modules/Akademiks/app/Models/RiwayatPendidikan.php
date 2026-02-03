@@ -34,8 +34,8 @@ class RiwayatPendidikan extends Model
     ];
 
 
-    // protected static function newFactory(): RiwayatPendidikanFactory
-    // {
-    //     // return RiwayatPendidikanFactory::new();
-    // }
+    protected static function newFactory()
+    {
+        return \Modules\Akademiks\Database\Factories\RiwayatPendidikanFactory::new();
+    }
 }
