@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('id_semester');
             $table->string('id_tahun_ajaran');
             $table->string('nama_semester');
+            $table->string('semester');
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
             $table->string('a_periode_aktif');
             $table->timestamps();
         });

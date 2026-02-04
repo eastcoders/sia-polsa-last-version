@@ -35,7 +35,7 @@ return [
         ],
     ],
 
-    'polsa' => [
+    'feeder' => [
         'base_url' => env('POLSA_BASE_URL'),
         'username' => env('POLSA_USERNAME'),
         'password' => env('POLSA_PASSWORD'),

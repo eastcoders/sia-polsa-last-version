@@ -6,18 +6,18 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-class PolsaApiService
+class FeederApiService
 {
     protected string $baseUrl;
     protected string $username;
     protected string $password;
-    protected $tokenCacheKey = 'polsa_api_token';
+    protected $tokenCacheKey = 'feeder_api_token';
 
     public function __construct()
     {
-        $this->baseUrl = config('services.polsa.base_url');
-        $this->username = config('services.polsa.username');
-        $this->password = config('services.polsa.password');
+        $this->baseUrl = config('services.feeder.base_url');
+        $this->username = config('services.feeder.username');
+        $this->password = config('services.feeder.password');
     }
 
     /**
