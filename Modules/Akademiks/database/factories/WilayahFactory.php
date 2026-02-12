@@ -3,10 +3,10 @@
 namespace Modules\Akademiks\database\factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Modules\Akademiks\Models\Wilayah;
+use App\Models\Wilayah;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Akademiks\Models\Wilayah>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Wilayah>
  */
 class WilayahFactory extends Factory
 {

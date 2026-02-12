@@ -19,7 +19,7 @@ class MahasiswaService
      * @param  array  $filter  Key-value pair for filtering (e.g., ['nim' => '123'])
      * @return array
      */
-    public function getBiodata(array $filter = [], int $limit = 10, int $offset = 0)
+    public function getBiodata(array $filter = [], int $limit = 0, int $offset = 0)
     {
         $payload = [
             'act' => 'GetBiodataMahasiswa',
@@ -28,10 +28,6 @@ class MahasiswaService
         ];
 
         if (! empty($filter)) {
-            // Depending on API, filter might be a JSON string or array.
-            // Usually in these implementations it's passing the array directly if the Service wrapper handles it.
-            // But if the API expects a SQL-like string filter (common in Feeder DIKTI), we might need to adjust.
-            // For now, passing as array/key-value.
             $payload['filter'] = $filter;
         }
 
