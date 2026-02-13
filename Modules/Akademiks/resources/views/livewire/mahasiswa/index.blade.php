@@ -15,8 +15,8 @@
                         data-bs-target="#offcanvasFilter">
                         <i class="ri-filter-3-line me-1"></i> Filter
                     </button>
-                    <a class="btn btn-primary" href="#">
-                        <i class="ri-add-line me-1"></i> Tambah 
+                    <a class="btn btn-primary" href="{{ route('akademiks.data-mahasiswa.create') }}">
+                        <i class="ri-add-line me-1"></i> Tambah
                     </a>
                 </div>
             </div>

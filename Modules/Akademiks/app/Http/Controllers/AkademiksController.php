@@ -12,7 +12,7 @@ class AkademiksController extends Controller
      */
     public function index()
     {
-        return view('akademiks::index');
+        return view('akademiks::mahasiswa.index');
     }
 
     /**

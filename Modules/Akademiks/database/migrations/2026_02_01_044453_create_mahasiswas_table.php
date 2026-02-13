@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('tanggal_lahir');
             $table->string('tempat_lahir');
             $table->enum('jenis_kelamin', ['L', 'P']);
-            $table->string('id_agamaa');
+            $table->string('id_agama');
             $table->string('email')->unique('email');
             $table->string('no_telp');
             $table->string('nik')->unique();

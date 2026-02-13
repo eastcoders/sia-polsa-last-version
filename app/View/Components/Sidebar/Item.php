@@ -16,10 +16,15 @@ class Item extends Component
         public string $route,
         public string $icon,
         public string $label,
+        public ?string $active = null,
     ) {}
 
     public function isActive(): bool
     {
+        if ($this->active) {
+            return Route::is($this->active);
+        }
+        
         return Route::is($this->route.'*');
     }
 

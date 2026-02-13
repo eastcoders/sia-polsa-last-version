@@ -2,7 +2,8 @@
 
 use Livewire\Volt\Component;
 
-new class extends Component {
+new class extends Component
+{
     //
 }; ?>
 
@@ -67,6 +68,7 @@ new class extends Component {
         <li class="menu-header mt-5">
             <span class="menu-header-text" data-i18n="Apps & Pages">Akademik</span>
         </li>
-        <x-sidebar.item route="akademiks.data-mahasiswa.index" icon="ri-graduation-cap-line" label="Data Mahasiswa" />
+        <x-sidebar.item route="akademiks.data-mahasiswa.index" active="akademiks.data-mahasiswa.*"
+            icon="ri-graduation-cap-line" label="Data Mahasiswa" />
     </ul>
 </aside>

@@ -4,6 +4,7 @@ namespace Modules\Akademiks\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 use Nwidart\Modules\Traits\PathNamespace;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -21,6 +22,7 @@ class AkademiksServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Livewire::component('akademiks::mahasiswa.create', \Modules\Akademiks\Livewire\Mahasiswa\Create::class);
         $this->registerCommands();
         $this->registerCommandSchedules();
         $this->registerTranslations();

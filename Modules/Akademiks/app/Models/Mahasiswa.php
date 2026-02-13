@@ -21,7 +21,7 @@ class Mahasiswa extends Model
         'tanggal_lahir',
         'tempat_lahir',
         'jenis_kelamin',
-        'id_agamaa',
+        'id_agama',
         'email',
         'no_telp',
         'nik',
@@ -39,21 +39,21 @@ class Mahasiswa extends Model
 
     public function alamat()
     {
-        return $this->hasOne(Alamat::class, 'id_mahasiswa', 'id_mahasiswa');
+        return $this->hasOne(Alamat::class, 'id_mahasiswa', 'id');
     }
 
     public function orangTua()
     {
-        return $this->hasOne(OrangTua::class, 'id_mahasiswa', 'id_mahasiswa');
+        return $this->hasOne(OrangTua::class, 'id_mahasiswa', 'id');
     }
 
     public function wali()
     {
-        return $this->hasOne(Wali::class, 'id_mahasiswa', 'id_mahasiswa');
+        return $this->hasOne(Wali::class, 'id_mahasiswa', 'id');
     }
 
     public function riwayatPendidikan()
     {
-        return $this->hasMany(RiwayatPendidikan::class, 'id_mahasiswa', 'id_mahasiswa');
+        return $this->hasMany(RiwayatPendidikan::class, 'id_mahasiswa', 'id');
     }
 }
